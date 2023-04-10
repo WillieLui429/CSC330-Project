@@ -26,6 +26,7 @@ public class Pokedex {
 		}
 		char choice='a';
 		String pname;
+		int poknum;
 		System.out.println("Pokedex: First Generation");
 		do
 		{
@@ -39,7 +40,13 @@ public class Pokedex {
 			{
 				System.out.println("What is the Pokemon you want to look up?");
 				pname = keyboard.nextLine();
-				NameLookup(PokeName,pname,Type1,Type2);
+				NameLookup(PokeName,pname,Type1,Type2,Poknum);
+			}
+			if(choice =='3')
+			{
+				System.out.println("What is the Pokemon you want to look up by number?");
+				poknum = keyboard.nextInt();
+				NumLookup(poknum,PokeName,Type1,Type2,Poknum);
 			}
 			if(choice== '4')
 			{
@@ -52,30 +59,41 @@ public class Pokedex {
 
 		
 	}
-	public static void Print(int num, ArrayList<String> Name,ArrayList<String> Type1,ArrayList<String> Type2 )
+	public static void Print(int num, ArrayList<String> Name,ArrayList<String> Type1,ArrayList<String> Type2,ArrayList<Integer> Poknum )
 	{
-		if(!(Type2.get(num).contains("None")))
+		int num1=num+1;
+		int num0 = num -1;
+		if(!(Type2.get(num0).contains("None")))
 		{
 			System.out.println("Number: " + num);
 			System.out.println("Pokemon: " + Name.get(num));
-			System.out.println("Type: " + Type1.get(num) +" and "+Type2.get(num));
+			System.out.println("Type: " + Type1.get(num1) +" and "+Type2.get(num));
 		}
 		else if(Type2.get(num).contains("None"))
 		{
+			System.out.println("Number: " + num1);
 			System.out.println("Pokemon: " + Name.get(num));
 			System.out.println("Type: " + Type1.get(num));
 		}
+		else if(!(Poknum.contains(num)))
+		{
+			System.out.println("The Pokedex has no data on this.");
+		}
 	}
-	public static void NameLookup(ArrayList<String> Name,String Pokname,ArrayList<String> Type1,ArrayList<String> Type2 )
+	public static void NameLookup(ArrayList<String> Name,String Pokname,ArrayList<String> Type1,ArrayList<String> Type2,ArrayList<Integer> Poknum )
 	{
 		int tof =Name.indexOf(Pokname);
 		if(tof!=-1)
 		{
-			Print(tof,Name,Type1,Type2);
+			Print(tof,Name,Type1,Type2,Poknum);
 		}
 		else if(tof==-1)
 		{
 			System.out.println("There is no such instance of "+ Pokname + " to be found");
 		}
+	}
+	public static void NumLookup(int num, ArrayList<String> PokeName,ArrayList<String> Type1, ArrayList<String> Type2,ArrayList<Integer> Poknum)
+	{
+		Print(num,PokeName, Type1, Type2, Poknum);
 	}
 }
