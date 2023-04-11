@@ -27,6 +27,7 @@ public class Pokedex {
 		char choice='a';
 		String pname;
 		int poknum;
+		String ptype;
 		System.out.println("Pokedex: First Generation");
 		do
 		{
@@ -42,13 +43,19 @@ public class Pokedex {
 				pname = keyboard.nextLine();
 				NameLookup(PokeName,pname,Type1,Type2,Poknum);
 			}
-			if(choice =='3')
+			else if(choice =='2')
+			{
+				System.out.println("What Pokemon type do you want to look up?");
+				ptype = keyboard.nextLine();
+				TypeLookup(ptype,Type2,PokeName, Type1, Poknum);
+			}
+			else if(choice =='3')
 			{
 				System.out.println("What is the Pokemon you want to look up by number?");
 				poknum = keyboard.nextInt();
 				NumLookup(poknum,PokeName,Type1,Type2,Poknum);
 			}
-			if(choice== '4')
+			else if(choice== '4')
 			{
 				System.out.println("Thank you for using the Pokedex");
 				System.out.println("Goodbye");
@@ -94,5 +101,17 @@ public class Pokedex {
 	public static void NumLookup(int num, ArrayList<String> PokeName,ArrayList<String> Type1, ArrayList<String> Type2,ArrayList<Integer> Poknum)
 	{
 		Print(num,PokeName, Type1, Type2, Poknum);
+	}
+	public static void TypeLookup(String typ, ArrayList<String> PokeName,ArrayList<String> Type1, ArrayList<String> Type2,ArrayList<Integer> Poknum)
+	{
+		int total = 0;
+		for(int i=0;i<PokeName.size();i++)
+		{
+			if(Type1.get(i).contains(typ) || Type2.get(i).contains(typ))
+			{
+				total++;
+			}
+		}
+		System.out.println("There are a total of " + total +" Pokemon that are "+typ+" type" );
 	}
 }
