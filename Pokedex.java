@@ -61,19 +61,18 @@ public class Pokedex {
 	}
 	public static void Print(int num, ArrayList<String> Name,ArrayList<String> Type1,ArrayList<String> Type2,ArrayList<Integer> Poknum )
 	{
-		int num1=num+1;
 		int num0 = num -1;
 		if(!(Type2.get(num0).contains("None")))
 		{
 			System.out.println("Number: " + num);
-			System.out.println("Pokemon: " + Name.get(num));
-			System.out.println("Type: " + Type1.get(num1) +" and "+Type2.get(num));
+			System.out.println("Pokemon: " + Name.get(num0));
+			System.out.println("Type: " + Type1.get(num0) +" and "+Type2.get(num0));
 		}
-		else if(Type2.get(num).contains("None"))
+		else if(Type2.get(num0).contains("None"))
 		{
-			System.out.println("Number: " + num1);
-			System.out.println("Pokemon: " + Name.get(num));
-			System.out.println("Type: " + Type1.get(num));
+			System.out.println("Number: " + num);
+			System.out.println("Pokemon: " + Name.get(num0));
+			System.out.println("Type: " + Type1.get(num0));
 		}
 		else if(!(Poknum.contains(num)))
 		{
