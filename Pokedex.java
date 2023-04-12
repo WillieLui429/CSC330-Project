@@ -66,32 +66,24 @@ public class Pokedex {
 
 		
 	}
-	public static void Print(int num, ArrayList<String> Name,ArrayList<String> Type1,ArrayList<String> Type2,ArrayList<Integer> Poknum )
-	{
-		int num0 = num -1;
-		if(!(Type2.get(num0).contains("None")))
-		{
-			System.out.println("Number: " + num);
-			System.out.println("Pokemon: " + Name.get(num0));
-			System.out.println("Type: " + Type1.get(num0) +" and "+Type2.get(num0));
-		}
-		else if(Type2.get(num0).contains("None"))
-		{
-			System.out.println("Number: " + num);
-			System.out.println("Pokemon: " + Name.get(num0));
-			System.out.println("Type: " + Type1.get(num0));
-		}
-		else if(!(Poknum.contains(num)))
-		{
-			System.out.println("The Pokedex has no data on this.");
-		}
-	}
 	public static void NameLookup(ArrayList<String> Name,String Pokname,ArrayList<String> Type1,ArrayList<String> Type2,ArrayList<Integer> Poknum )
 	{
 		int tof =Name.indexOf(Pokname);
 		if(tof!=-1)
 		{
-			Print(tof,Name,Type1,Type2,Poknum);
+			if(!(Type2.get(tof).contains("None")))
+			{
+				System.out.println("Number: " + Poknum.get(tof));
+				System.out.println("Pokemon: " + Name.get(tof));
+				System.out.println("Type: " + Type1.get(tof) +" and "+Type2.get(tof));
+				
+			}
+			else if((Type2.get(tof).contains("None")))
+			{
+				System.out.println("Number: " + Poknum);
+				System.out.println("Pokemon: " + Name.get(tof));
+				System.out.println("Type: " + Type1.get(tof));
+			}
 		}
 		else if(tof==-1)
 		{
@@ -100,14 +92,31 @@ public class Pokedex {
 	}
 	public static void NumLookup(int num, ArrayList<String> PokeName,ArrayList<String> Type1, ArrayList<String> Type2,ArrayList<Integer> Poknum)
 	{
-		Print(num,PokeName, Type1, Type2, Poknum);
+		num--;
+		
+		if(!(Type2.get(num).contains("None")))
+		{
+			System.out.println("Number: " + Poknum.get(num));
+			System.out.println("Pokemon: " + PokeName.get(num));
+			System.out.println("Type: " + Type1.get(num) +" and "+Type2.get(num));
+		}
+		else if(Type2.get(num).contains("None"))
+		{
+			System.out.println("Number: " + Poknum.get(num));
+			System.out.println("Pokemon: " + PokeName.get(num));
+			System.out.println("Type: " + Type1.get(num));
+		}
+		else if(!(Poknum.contains(num)))
+		{
+			System.out.println("The Pokedex has no data on this.");
+		}
 	}
 	public static void TypeLookup(String typ, ArrayList<String> PokeName,ArrayList<String> Type1, ArrayList<String> Type2,ArrayList<Integer> Poknum)
 	{
 		int total = 0;
 		for(int i=0;i<PokeName.size();i++)
 		{
-			if(Type1.get(i).contains(typ) || Type2.get(i).contains(typ))
+			if(Type1.get(i).contains(typ)||Type2.get(i).contains(typ))
 			{
 				total++;
 			}
