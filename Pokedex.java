@@ -116,7 +116,11 @@ public class Pokedex {
 		int total = 0;
 		for(int i=0;i<PokeName.size();i++)
 		{
-			if(Type1.get(i).contains(typ)||Type2.get(i).contains(typ))
+			if(Type2.get(i).contains(typ))
+			{
+				total++;
+			}
+			else if(PokeName.get(i).contains(typ))
 			{
 				total++;
 			}
