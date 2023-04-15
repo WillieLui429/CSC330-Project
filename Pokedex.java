@@ -35,7 +35,8 @@ public class Pokedex {
 			System.out.println("1) Find a Pokemon by name.");
 			System.out.println("2) Look up some Pokemon by type");
 			System.out.println("3) Look up a Pokemon by number");
-			System.out.println("4) Quit");
+			System.out.println("4) See the weakness of your Pokemon");
+			System.out.println("5) Quit");
 			choice = myObj.next().charAt(0);
 			if(choice =='1')
 			{
@@ -55,13 +56,20 @@ public class Pokedex {
 				poknum = keyboard.nextInt();
 				NumLookup(poknum,PokeName,Type1,Type2,Poknum);
 			}
-			else if(choice== '4')
+			else if(choice =='4')
+			{
+				System.out.println("What is the Pokemon you want to look up?");
+				pname = keyboard.nextLine();
+				WeaknessLookup(pname,PokeName,Type1,Type2,Poknum);
+				
+			}
+			else if(choice== '5')
 			{
 				System.out.println("Thank you for using the Pokedex");
 				System.out.println("Goodbye");
 			}
 			
-		}while(choice!='4');
+		}while(choice!='5');
 		inputFile.close();
 
 		
@@ -126,5 +134,176 @@ public class Pokedex {
 			}
 		}
 		System.out.println("There are a total of " + total +" Pokemon that are "+typ+" type" );
+	}
+	public static void WeaknessLookup(String name, ArrayList<String> PokeName, ArrayList<String> Type1, ArrayList<String> Type2,ArrayList<Integer> Poknum)
+	{
+		NameLookup(PokeName, name,Type1,Type2,Poknum);
+		String Weak1 = null, Weak2 = null;
+		int tof=PokeName.indexOf(name);
+		if(tof==-1)
+		{
+			System.out.println("The Pokemon that you just entered does not exist");
+		}
+		else if(!(tof==-1))
+		{
+			if(Type1.get(tof).contains("Normal"))
+			{
+				Weak1="Fighting";
+			}
+			else if(Type1.get(tof).contains("Fire"))
+			{
+				Weak1="Water, Ground, Rock";
+			}
+			else if(Type1.get(tof).contains("Water"))
+			{
+				Weak1="Grass, Electric";
+			}
+			else if(Type1.get(tof).contains("Grass"))
+			{
+				Weak1="Fire, Ice, Poison, Flying, Bug";
+			}
+			else if(Type1.get(tof).contains("Electric"))
+			{
+				Weak1="Ground";
+			}
+			else if(Type1.get(tof).contains("Ice"))
+			{
+				Weak1="Fire, Fighting, Rock, Steel";
+			}
+			else if(Type1.get(tof).contains("Fighting"))
+			{
+				Weak1="Flying, Psychic, Fairy";
+			}
+			else if(Type1.get(tof).contains("Poison"))
+			{
+				Weak1="Ground, Psychic";
+			}
+			else if(Type1.get(tof).contains("Ground"))
+			{
+				Weak1="Water, Grass, Ice";
+			}
+			else if(Type1.get(tof).contains("Flying"))
+			{
+				Weak1="Electric, Ice, Rock";
+			}
+			else if(Type1.get(tof).contains("Psychic"))
+			{
+				Weak1="Bug, Ghost, Dark";
+			}
+			else if(Type1.get(tof).contains("Bug"))
+			{
+				Weak1="Flying, Rock, Fire";
+			}
+			else if(Type1.get(tof).contains("Rock"))
+			{
+				Weak1="Water, Grass, Fighting, Ground, Steel";
+			}
+			else if(Type1.get(tof).contains("Ghost"))
+			{
+				Weak1="Ghost, Dark";
+			}
+			else if(Type1.get(tof).contains("Dragon"))
+			{
+				Weak1="Ice, Dragon, Fairy";
+			}
+			else if(Type1.get(tof).contains("Dark"))
+			{
+				Weak1="Fighting, Bug, Fairy";
+			}
+			else if(Type1.get(tof).contains("Steel"))
+			{
+				Weak1="Fire, Fighting, Ground";
+			}
+			else if(Type1.get(tof).contains("Fairy"))
+			{
+				Weak1="Poison, Steel";
+			}
+			if(Type2.get(tof).contains("Normal"))
+			{
+				Weak2="Fighting";
+			}
+			else if(Type2.get(tof).contains("Fire"))
+			{
+				Weak2="Water, Ground, Rock";
+			}
+			else if(Type2.get(tof).contains("Water"))
+			{
+				Weak2="Grass, Electric";
+			}
+			else if(Type2.get(tof).contains("Grass"))
+			{
+				Weak2="Fire, Ice, Poison, Flying, Bug";
+			}
+			else if(Type2.get(tof).contains("Electric"))
+			{
+				Weak2="Ground";
+			}
+			else if(Type2.get(tof).contains("Electric"))
+			{
+				Weak2="Ground";
+			}
+			else if(Type2.get(tof).contains("Ice"))
+			{
+				Weak2="Fire, Fighting, Rock, Steel";
+			}
+			else if(Type2.get(tof).contains("Fighting"))
+			{
+				Weak2="Flying, Psychic, Fairy";
+			}
+			else if(Type2.get(tof).contains("Poison"))
+			{
+				Weak2="Ground, Psychic";
+			}
+			else if(Type2.get(tof).contains("Ground"))
+			{
+				Weak2="Water, Grass, Ice";
+			}
+			else if(Type2.get(tof).contains("Flying"))
+			{
+				Weak2="Electric, Ice, Rock";
+			}
+			else if(Type2.get(tof).contains("Psychic"))
+			{
+				Weak2="Bug, Ghost, Dark";
+			}
+			else if(Type2.get(tof).contains("Bug"))
+			{
+				Weak2="Flying, Rock, Fire";
+			}
+			else if(Type2.get(tof).contains("Rock"))
+			{
+				Weak2="Water, Grass, Fighting, Ground, Steel";
+			}
+			else if(Type2.get(tof).contains("Ghost"))
+			{
+				Weak2="Ghost, Dark";
+			}
+			else if(Type2.get(tof).contains("Dragon"))
+			{
+				Weak2="Ice, Dragon, Fairy";
+			}
+			else if(Type2.get(tof).contains("Dark"))
+			{
+				Weak2="Fighting, Bug, Fairy";
+			}
+			else if(Type2.get(tof).contains("Steel"))
+			{
+				Weak2="Fire, Fighting, Ground";
+			}
+			else if(Type2.get(tof).contains("Fairy"))
+			{
+				Weak2="Poison, Steel";
+			}
+			else if(Type2.get(tof).contains("None"))
+			{
+				Weak2=" ";
+			}
+			Weakprint(Weak1,Weak2);
+
+		}
+	}
+	public static void Weakprint(String Weak1,String Weak2)
+	{
+		System.out.println("The weakness of this Pokemon is/are " +Weak1+" "+Weak2);
 	}
 }
