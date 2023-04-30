@@ -1,309 +1,158 @@
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
 import javax.swing.*;
-@SuppressWarnings("unchecked")
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+
+import static java.awt.GridBagConstraints.PAGE_START;
+
 public class Pokedex {
-	public static void main(String arg[])  throws IOException
-	{
-		File myFile = new File("C:\\Users\\willi\\Documents\\CSC330 Project.csv");
-		Scanner inputFile = new Scanner(myFile);
-		ArrayList<Integer> Poknum = new ArrayList<Integer>();
-		ArrayList<String> PokeName = new ArrayList<String>();
-		ArrayList<String> Type1 = new ArrayList<String>();
-		ArrayList<String> Type2 = new ArrayList<String>();
-		Scanner myObj = new Scanner(System.in);
-		Scanner keyboard = new Scanner(System.in);
-		while(inputFile.hasNext())
-		{
-			String line = inputFile.nextLine();
-            String[] token=line.split(","); 
-            Poknum.add(Integer.parseInt(token[0]));
-            PokeName.add(token[1]);
-            Type1.add(token[2]);
-            Type2.add(token[3]);
-            
-		}
-		char choice='a';
-		String pname;
-		int poknum;
-		String ptype;
-		System.out.println("Pokedex: First Generation");
-		do
-		{
-			System.out.println("What would you like to do?");
-			System.out.println("1) Find a Pokemon by name.");
-			System.out.println("2) Look up some Pokemon by type");
-			System.out.println("3) Look up a Pokemon by number");
-			System.out.println("4) See the weakness of your Pokemon");
-			System.out.println("5) Quit");
-			choice = myObj.next().charAt(0);
-			if(choice =='1')
-			{
-				System.out.println("What is the Pokemon you want to look up?");
-				pname = keyboard.nextLine();
-				NameLookup(PokeName,pname,Type1,Type2,Poknum);
-			}
-			else if(choice =='2')
-			{
-				System.out.println("What Pokemon type do you want to look up?");
-				ptype = keyboard.nextLine();
-				TypeLookup(ptype,Type2,PokeName, Type1, Poknum);
-			}
-			else if(choice =='3')
-			{
-				System.out.println("What is the Pokemon you want to look up by number?");
-				poknum = keyboard.nextInt();
-				NumLookup(poknum,PokeName,Type1,Type2,Poknum);
-			}
-			else if(choice =='4')
-			{
-				System.out.println("What is the Pokemon you want to look up?");
-				pname = keyboard.nextLine();
-				WeaknessLookup(pname,PokeName,Type1,Type2,Poknum);
-				
-			}
-			else if(choice== '5')
-			{
-				System.out.println("Thank you for using the Pokedex");
-				System.out.println("Goodbye");
-			}
-			
-		}while(choice!='5');
-		inputFile.close();
+    public static void main(String[] args) {
+        try (var file = new FileReader("PokemonGen1.csv")) {
+            var parser = new PokemonParser(file);
+            var f = new PokedexFrame(parser.parse());
+            f.setVisible(true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
 
-		
-	}
-	public static void NameLookup(ArrayList<String> Name,String Pokname,ArrayList<String> Type1,ArrayList<String> Type2,ArrayList<Integer> Poknum )
-	{
-		int tof =Name.indexOf(Pokname);
-		if(tof!=-1)
-		{
-			if(!(Type2.get(tof).contains("None")))
-			{
-				System.out.println("Number: " + Poknum.get(tof));
-				System.out.println("Pokemon: " + Name.get(tof));
-				System.out.println("Type: " + Type1.get(tof) +" and "+Type2.get(tof));
-				
-			}
-			else if((Type2.get(tof).contains("None")))
-			{
-				System.out.println("Number: " + Poknum);
-				System.out.println("Pokemon: " + Name.get(tof));
-				System.out.println("Type: " + Type1.get(tof));
-			}
-		}
-		else if(tof==-1)
-		{
-			System.out.println("There is no such instance of "+ Pokname + " to be found");
-		}
-	}
-	public static void NumLookup(int num, ArrayList<String> PokeName,ArrayList<String> Type1, ArrayList<String> Type2,ArrayList<Integer> Poknum)
-	{
-		num--;
-		
-		if(!(Type2.get(num).contains("None")))
-		{
-			System.out.println("Number: " + Poknum.get(num));
-			System.out.println("Pokemon: " + PokeName.get(num));
-			System.out.println("Type: " + Type1.get(num) +" and "+Type2.get(num));
-		}
-		else if(Type2.get(num).contains("None"))
-		{
-			System.out.println("Number: " + Poknum.get(num));
-			System.out.println("Pokemon: " + PokeName.get(num));
-			System.out.println("Type: " + Type1.get(num));
-		}
-		else if(!(Poknum.contains(num)))
-		{
-			System.out.println("The Pokedex has no data on this.");
-		}
-	}
-	public static void TypeLookup(String typ, ArrayList<String> PokeName,ArrayList<String> Type1, ArrayList<String> Type2,ArrayList<Integer> Poknum)
-	{
-		int total = 0;
-		for(int i=0;i<PokeName.size();i++)
-		{
-			if(Type2.get(i).contains(typ))
-			{
-				total++;
-			}
-			else if(PokeName.get(i).contains(typ))
-			{
-				total++;
-			}
-		}
-		System.out.println("There are a total of " + total +" Pokemon that are "+typ+" type" );
-	}
-	public static void WeaknessLookup(String name, ArrayList<String> PokeName, ArrayList<String> Type1, ArrayList<String> Type2,ArrayList<Integer> Poknum)
-	{
-		NameLookup(PokeName, name,Type1,Type2,Poknum);
-		String Weak1 = null, Weak2 = null;
-		int tof=PokeName.indexOf(name);
-		if(tof==-1)
-		{
-			System.out.println("The Pokemon that you just entered does not exist");
-		}
-		else if(!(tof==-1))
-		{
-			if(Type1.get(tof).contains("Normal"))
-			{
-				Weak1="Fighting";
-			}
-			else if(Type1.get(tof).contains("Fire"))
-			{
-				Weak1="Water, Ground, Rock";
-			}
-			else if(Type1.get(tof).contains("Water"))
-			{
-				Weak1="Grass, Electric";
-			}
-			else if(Type1.get(tof).contains("Grass"))
-			{
-				Weak1="Fire, Ice, Poison, Flying, Bug";
-			}
-			else if(Type1.get(tof).contains("Electric"))
-			{
-				Weak1="Ground";
-			}
-			else if(Type1.get(tof).contains("Ice"))
-			{
-				Weak1="Fire, Fighting, Rock, Steel";
-			}
-			else if(Type1.get(tof).contains("Fighting"))
-			{
-				Weak1="Flying, Psychic, Fairy";
-			}
-			else if(Type1.get(tof).contains("Poison"))
-			{
-				Weak1="Ground, Psychic";
-			}
-			else if(Type1.get(tof).contains("Ground"))
-			{
-				Weak1="Water, Grass, Ice";
-			}
-			else if(Type1.get(tof).contains("Flying"))
-			{
-				Weak1="Electric, Ice, Rock";
-			}
-			else if(Type1.get(tof).contains("Psychic"))
-			{
-				Weak1="Bug, Ghost, Dark";
-			}
-			else if(Type1.get(tof).contains("Bug"))
-			{
-				Weak1="Flying, Rock, Fire";
-			}
-			else if(Type1.get(tof).contains("Rock"))
-			{
-				Weak1="Water, Grass, Fighting, Ground, Steel";
-			}
-			else if(Type1.get(tof).contains("Ghost"))
-			{
-				Weak1="Ghost, Dark";
-			}
-			else if(Type1.get(tof).contains("Dragon"))
-			{
-				Weak1="Ice, Dragon, Fairy";
-			}
-			else if(Type1.get(tof).contains("Dark"))
-			{
-				Weak1="Fighting, Bug, Fairy";
-			}
-			else if(Type1.get(tof).contains("Steel"))
-			{
-				Weak1="Fire, Fighting, Ground";
-			}
-			else if(Type1.get(tof).contains("Fairy"))
-			{
-				Weak1="Poison, Steel";
-			}
-			if(Type2.get(tof).contains("Normal"))
-			{
-				Weak2="Fighting";
-			}
-			else if(Type2.get(tof).contains("Fire"))
-			{
-				Weak2="Water, Ground, Rock";
-			}
-			else if(Type2.get(tof).contains("Water"))
-			{
-				Weak2="Grass, Electric";
-			}
-			else if(Type2.get(tof).contains("Grass"))
-			{
-				Weak2="Fire, Ice, Poison, Flying, Bug";
-			}
-			else if(Type2.get(tof).contains("Electric"))
-			{
-				Weak2="Ground";
-			}
-			else if(Type2.get(tof).contains("Electric"))
-			{
-				Weak2="Ground";
-			}
-			else if(Type2.get(tof).contains("Ice"))
-			{
-				Weak2="Fire, Fighting, Rock, Steel";
-			}
-			else if(Type2.get(tof).contains("Fighting"))
-			{
-				Weak2="Flying, Psychic, Fairy";
-			}
-			else if(Type2.get(tof).contains("Poison"))
-			{
-				Weak2="Ground, Psychic";
-			}
-			else if(Type2.get(tof).contains("Ground"))
-			{
-				Weak2="Water, Grass, Ice";
-			}
-			else if(Type2.get(tof).contains("Flying"))
-			{
-				Weak2="Electric, Ice, Rock";
-			}
-			else if(Type2.get(tof).contains("Psychic"))
-			{
-				Weak2="Bug, Ghost, Dark";
-			}
-			else if(Type2.get(tof).contains("Bug"))
-			{
-				Weak2="Flying, Rock, Fire";
-			}
-			else if(Type2.get(tof).contains("Rock"))
-			{
-				Weak2="Water, Grass, Fighting, Ground, Steel";
-			}
-			else if(Type2.get(tof).contains("Ghost"))
-			{
-				Weak2="Ghost, Dark";
-			}
-			else if(Type2.get(tof).contains("Dragon"))
-			{
-				Weak2="Ice, Dragon, Fairy";
-			}
-			else if(Type2.get(tof).contains("Dark"))
-			{
-				Weak2="Fighting, Bug, Fairy";
-			}
-			else if(Type2.get(tof).contains("Steel"))
-			{
-				Weak2="Fire, Fighting, Ground";
-			}
-			else if(Type2.get(tof).contains("Fairy"))
-			{
-				Weak2="Poison, Steel";
-			}
-			else if(Type2.get(tof).contains("None"))
-			{
-				Weak2=" ";
-			}
-			Weakprint(Weak1,Weak2);
+// TODO: Add Search By ID and Name
+// TODO: Add Extra Description
+class PokedexFrame extends JFrame implements ActionListener {
+    private final int imageWidth = 450;
+    private final int imageHeight = 450;
+    private final List<Pokemon> pokemonList;
+    //private JTextField search;
+    //private JButton submitSearch;
+    private final JButton leftPokemon;
+    private final JButton rightPokemon;
+    private final JLabel name;
+    private final JLabel icon;
+    //private JTextArea description;
+    private final JLabel type1;
+    private final JLabel type2;
+    private int currentPokemon = 0;
 
-		}
-	}
-	public static void Weakprint(String Weak1,String Weak2)
-	{
-		System.out.println("The weakness of this Pokemon is/are " +Weak1+" "+Weak2);
-	}
+    public PokedexFrame(List<Pokemon> pokemonList) {
+        setTitle("Pokedex");
+        setBounds(0, 0, 1000, 600);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.pokemonList = pokemonList;
+
+        var panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
+        var constraints = new GridBagConstraints();
+
+        // Add Icon
+        var iconImg = new ImageIcon("icons/pokemon/1.png", "bulbasaur");
+        resizeIcon(iconImg, imageWidth, imageHeight);
+        icon = new JLabel(iconImg);
+
+        constraints.gridx = 0;
+        constraints.gridy = 1;
+        panel.add(icon, constraints);
+
+        // Add Name
+        name = new JLabel("Bulbasaur #001", JLabel.CENTER);
+        name.setFont(new Font("Fira Sans", Font.PLAIN, 50));
+
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        panel.add(name, constraints);
+
+        // Add Navigation Arrows
+        var arrowSize = 40;
+        var arrowIcon = new ImageIcon("icons/ui/arrow-left-solid.png");
+        resizeIcon(arrowIcon, (int) (arrowSize * 0.875), arrowSize);
+        leftPokemon = new JButton(arrowIcon);
+        leftPokemon.setFocusPainted(false);
+        leftPokemon.setMnemonic(KeyEvent.VK_LEFT);
+        leftPokemon.addActionListener(this);
+
+        constraints.ipadx = 65;
+        constraints.ipady = 25;
+        constraints.gridx = 1;
+        constraints.gridy = 0;
+        panel.add(leftPokemon, constraints);
+
+        arrowIcon = new ImageIcon("icons/ui/arrow-right-solid.png");
+        resizeIcon(arrowIcon, (int) (arrowSize * 0.875), arrowSize);
+        rightPokemon = new JButton(arrowIcon);
+        rightPokemon.setFocusPainted(false);
+        rightPokemon.setMnemonic(KeyEvent.VK_RIGHT);
+        rightPokemon.addActionListener(this);
+
+        constraints.gridx = 2;
+        panel.add(rightPokemon, constraints);
+
+        // Add Pokemon Types
+        var buttonSize = new int[]{85, 25};
+        type1 = new JLabel("GRASS", JLabel.CENTER);
+        type1.setMinimumSize(new Dimension(buttonSize[0], buttonSize[1]));
+        type1.setPreferredSize(new Dimension(buttonSize[0], buttonSize[1]));
+        type1.setMaximumSize(new Dimension(buttonSize[0], buttonSize[1]));
+        type1.setOpaque(true);
+        type1.setFont(new Font("Fira Sans", Font.PLAIN, 30));
+        type1.setForeground(new Color(0xf2eee8));
+        type1.setBackground(new Color(0x619333));
+
+        constraints.ipadx = buttonSize[0];
+        constraints.ipady = buttonSize[1];
+        constraints.gridx = 1;
+        constraints.gridy = 1;
+        constraints.anchor = PAGE_START;
+        constraints.insets = new Insets(20, 10, 0, 0);
+        panel.add(type1, constraints);
+
+        type2 = new JLabel("POISON", JLabel.CENTER);
+        type2.setMinimumSize(new Dimension(buttonSize[0], buttonSize[1]));
+        type2.setPreferredSize(new Dimension(buttonSize[0], buttonSize[1]));
+        type2.setMaximumSize(new Dimension(buttonSize[0], buttonSize[1]));
+        type2.setOpaque(true);
+        type2.setFont(new Font("Fira Sans", Font.PLAIN, 30));
+        type2.setForeground(new Color(0xf2eee8));
+        type2.setBackground(new Color(0x8e4d7e));
+
+        constraints.gridx = 2;
+        panel.add(type2, constraints);
+
+        getContentPane().add(panel);
+    }
+
+    private void resizeIcon(ImageIcon imgIcon, int w, int h) {
+        BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = resizedImg.createGraphics();
+        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        g2.drawImage(imgIcon.getImage(), 0, 0, w, h, null);
+        g2.dispose();
+        imgIcon.setImage(resizedImg);
+    }
+
+    public void actionPerformed(ActionEvent actionEvent) {
+        if (actionEvent.getSource() == leftPokemon) {
+            if (currentPokemon == 0) currentPokemon = pokemonList.size();
+            updatePokemon(pokemonList.get(--currentPokemon));
+        }
+        if (actionEvent.getSource() == rightPokemon) {
+            if (currentPokemon == pokemonList.size() - 1) currentPokemon = -1;
+            updatePokemon(pokemonList.get(++currentPokemon));
+        }
+    }
+
+    private void updatePokemon(Pokemon pokemon) {
+        name.setText(pokemon.name + " #" + ((pokemon.id < 10) ? "00" + pokemon.id : (pokemon.id < 100) ? "0" + pokemon.id : pokemon.id));
+        var iconImg = new ImageIcon("icons/pokemon/" + pokemon.id + ".png");
+        resizeIcon(iconImg, imageWidth, imageHeight);
+        icon.setIcon(iconImg);
+        type1.setText(pokemon.type1.toString());
+        type1.setBackground(new Color(pokemon.type1.toColor()));
+        type2.setText(pokemon.type2.toString());
+        type2.setBackground(new Color(pokemon.type2.toColor()));
+    }
 }
