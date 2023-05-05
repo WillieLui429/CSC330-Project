@@ -7,15 +7,18 @@ import java.awt.image.BufferedImage;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
-
+import java.util.Scanner;
 import static java.awt.GridBagConstraints.PAGE_START;
-
+import java.util.Scanner;
 public class Pokedex {
     public static void main(String[] args) {
         try (var file = new FileReader("PokemonGen1.csv")) {
             var parser = new PokemonParser(file);
             var f = new PokedexFrame(parser.parse());
             f.setVisible(true);
+            Scanner keyboard = new Scanner(System.in);
+            String query = keyboard.nextLine();
+            var search = new SearchBar(query);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -122,6 +125,13 @@ class PokedexFrame extends JFrame implements ActionListener {
         constraints.gridx = 2;
         panel.add(type2, constraints);
 
+        JTextField textField = new JTextField();
+        textField.setSize(8000, 100);
+        constraints.gridx =60;
+        constraints.gridy =25;
+        panel.add(textField,constraints);
+
+
         getContentPane().add(panel);
     }
 
@@ -155,4 +165,5 @@ class PokedexFrame extends JFrame implements ActionListener {
         type2.setText(pokemon.type2.toString());
         type2.setBackground(new Color(pokemon.type2.toColor()));
     }
+    
 }
