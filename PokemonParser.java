@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Arrays;
 import java.util.List;
 
 public class PokemonParser {
@@ -20,9 +21,9 @@ public class PokemonParser {
             case "Dragon" -> PokemonType.DRAGON;
             case "Electric" -> PokemonType.ELECTRIC;
             case "Fairy" -> PokemonType.FAIRY;
-            case "Fighting" -> PokemonType.FIGHTING;
+            case "Fight" -> PokemonType.FIGHTING;
             case "Fire" -> PokemonType.FIRE;
-            case "Flight" -> PokemonType.FLIGHT;
+            case "Flying" -> PokemonType.FLIGHT;
             case "Ghost" -> PokemonType.GHOST;
             case "Grass" -> PokemonType.GRASS;
             case "Ground" -> PokemonType.GROUND;
@@ -40,6 +41,6 @@ public class PokemonParser {
 
     private Pokemon parsePokemon(String str) {
         var arr = str.split(",");
-        return new Pokemon(Integer.parseInt(arr[0]), arr[1], stringToPokemonType(arr[2]), stringToPokemonType(arr[3]));
+        return new Pokemon(Integer.parseInt(arr[0]), arr[1], stringToPokemonType(arr[2]), stringToPokemonType(arr[3]), str.split("\"")[1]);
     }
 }

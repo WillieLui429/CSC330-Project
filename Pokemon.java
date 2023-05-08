@@ -3,12 +3,14 @@ public class Pokemon {
     String name;
     PokemonType type1;
     PokemonType type2;
+    String description;
 
-    Pokemon(int id, String name, PokemonType type1, PokemonType type2) {
+    Pokemon(int id, String name, PokemonType type1, PokemonType type2, String description) {
         this.id = id;
         this.name = name;
         this.type1 = type1;
         this.type2 = type2;
+        this.description = description;
     }
 
     @Override
@@ -18,6 +20,7 @@ public class Pokemon {
                 ", name='" + name + '\'' +
                 ", type1=" + type1 +
                 ", type2=" + type2 +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

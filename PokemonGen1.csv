@@ -1,151 +1,151 @@
-1,Bulbasaur,Grass,Poison
-2,Ivysaur,Grass ,Poison
-3,Venusaur,Grass,Poison
-4,Charmander,Fire,None
-5,Charmeleon,Fire,None
-6,Charizard,Fire,Flying
-7,Squirtle,Water,None
-8,Wartortle,Water,None
-9,Blastoise,Water,None
-10,Caterpie,Bug,None
-11,Metapod,Bug,None
-12,Butterfree,Bug,Flying
-13,Weedle,Bug,Poison
-14,Kakuna,Bug,Poison
-15,Beedrill,Bug,Poison
-16,Pidgey,Normal,Flying
-17,Pidgeotto,Normal,Flying
-18,Pidgeot,Normal,Flying
-19,Rattata,Normal,None
-20,Raticate,Normal,None
-21,Spearow,Normal,Flying
-22,Fearow,Normal,Flying
-23,Ekans,Poison,None
-24,Arbok,Poison,None
-25,Pikachu,Electric,None
-26,Raichu,Electric,None
-27,Sandshrew,Ground,None
-28,Sandslash,Ground,None
-29,Nidoran?,Poison,None
-30,Nidorina,Poison,None
-31,Nidoqueen,Poison,Ground
-32,Nidoran?,Poison,None
-33,Nidorino,Poison,None
-34,Nidoking,Poison,Ground
-35,Clefairy,Fairy,None
-36,Clefable,Fairy,None
-37,Vulpix,Fire,None
-38,Ninetales,Fire,None
-39,Jigglypuff,Normal,Fairy
-40,Wigglytuff,Normal,Fairy
-41,Zubat,Poison,Flying
-42,Golbat,Poison,Flying
-43,Oddish,Grass,Poison
-44,Gloom,Grass,Poison
-45,Vileplume,Grass,Poison
-46,Paras,Bug,Grass
-47,Parasect,Bug,Grass
-48,Venonat,Bug,Poison
-49,Venomath,Bug,Poison
-50,Diglet,Ground,None
-51,Dugtrio,Ground,None
-52,Meowth,Normal,None
-53,Persian,Normal,None
-54,Psyduck,Water,None
-55,Golduck,Water,None
-56,Mankey,Fight,None
-57,Primape,Fight,None
-58,Growlithe,Fire,None
-59,Arcanine,Fire,None
-60,Poliwag,Water,None
-61,Poliwhirl,Water,None
-62,Poliwrath,Water,Fight
-63,Abra,Psychic,None
-64,Kadabra,Psychic,None
-65,Alakazam,Psychic,None
-66,Machop,Fight,None
-67,Machoke,Fight,None
-68,Machamp,Fight,None
-69,Bellsprout,Grass,Poison
-70,Weepinbell,Grass,Poison
-71,VictreeBel,Grass,Poison
-72,Tentacool,Water,Poison
-73,Tentacruel,Water,Poison
-74,Geodude,Rock,Ground
-75,Graveler,Rock,Ground
-76,Golem,Rock,Ground
-77,Ponyta,Fire,None
-78,Rapidash,Fire,None
-79,Slowpoke,Water,Psychic
-80,Slowbrow,Water,Psychic
-81,Magnemite,Electric,Steel
-82,Magneton,Electric,Steel
-83,Farfetch'd,Normal,Flying
-84,Doduo,Normal,Flying
-85,Dodrio,Normal,Flying
-86,Seel,Water,None
-87,Dewgong,Water,Ice
-88,Grimer,Poison,None
-89,Muk,Poison,None
-90,Shelder,Water,None
-91,Cloyster,Water,Ice
-92,Gastly,Ghost,Poison
-93,Haunter,Ghost,Poison
-94,Gengar,Ghost,Poison
-95,Onix,Rock,Ground
-96,Drowzee,Psychic,None
-97,Hypno,Psychic,None
-98,Krabby,Water,None
-99,Kingler,Water,None
-100,Voltorb,Electric,None
-101,Electrode,Electric,None
-102,Exeggcute,Grass,Psychic
-103,Exeggutor,Grass,Psychic
-104,Cubone,Ground,None
-105,Marowak,Ground,None
-106,Hitmonlee,Fight,None
-107,Hitmonchan,Fight,None
-108,Lickitung,Normal,None
-109,Koffing,Poison,None
-110,Weezing,Poison,None
-111,Rhyhorn,Ground,Rock
-112,Rhydon,Ground,Rock
-113,Chansey,Normal,None
-114,Tangela,Grass,None
-115,Kangaskhan,Normal,None
-116,Horsea,Water,None
-117,Seadra,Water,None
-118,Goldeen,Water,None
-119,Seaking,Water,None
-120,Staryu,Water,None
-121,Starmie,Water,Psychic
-122,Mr.Mine,Psychic,Fairy
-123,Scyther,Bug,Flying
-124,Jynx,Ice,Psychic
-125,Electabuzz,Electric,None
-126,Magmar,Fire,None
-127,Pinsir,Bug,None
-128,Tauros,Normal,None
-129,Magikarp,Water,None
-130,Gyarados,Water,Flying
-131,Lapras,Water,Ice
-132,Ditto,Normal,None
-133,Eevee,Normal,None
-134,Vaporeon,Water,None
-135,Jolteon,Electric,None
-136,Flareon,Fire,None
-137,Porygon,Normal,None
-138,Omanyte,Rock,Water
-139,Omastar,Rock,Water
-140,Kabuto,Rock,Water
-141,Kabutops,Rock,Water
-142,Aerodactyl,Rock,Flying
-143,Snorlax,Normal,None
-144,Articuno,Ice,Flying
-145,Zapdos,Electric,Flying
-146,Moltres,Fire,Flying
-147,Dratini,Dragon,None
-148,Dragonair,Dragon,None
-149,Dragonite,Dragon,Flying
-150,Mewtwo,Psychic,None
-151,Mew,Psychic,None
+1,Bulbasaur,Grass,Poison,"There is a plant seed on its back right from the day this POKéMON is born. The seed slowly grows larger."
+2,Ivysaur,Grass,Poison,"There is a plant bulb on its back. When it absorbs nutrients, the bulb is said to blossom into a large flower."
+3,Venusaur,Grass,Poison,"A bewitching aroma wafts from its flower. The fragrance becalms those engaged in a battle."
+4,Charmander,Fire,None,"From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out."
+5,Charmeleon,Fire,None,"It lashes about with its tail to knock down its foe. It then tears up the fallen opponent with sharp claws."
+6,Charizard,Fire,Flying,"Its wings can carry this POKéMON close to an altitude of 4,600 feet. It blows out fire at very high temperatures."
+7,Squirtle,Water,None,"When it retracts its long neck into its shell, it squirts out water with vigorous force."
+8,Wartortle,Water,None,"This POKéMON is very popular as a pet. Its fur-covered tail is a symbol of its longevity."
+9,Blastoise,Water,None,"It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell."
+10,Caterpie,Bug,None,"It is covered with a green skin. When it grows, it sheds the skin, covers itself with silk, and becomes a cocoon."
+11,Metapod,Bug,None,"Even though it is encased in a sturdy shell, the body inside is tender. It can’t withstand a harsh attack."
+12,Butterfree,Bug,Flying,"The wings are protected by rain-repellent dust. As a result, this POKéMON can fly about even in rain."
+13,Weedle,Bug,Poison,"Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head."
+14,Kakuna,Bug,Poison,"This POKéMON is in a temporary stage while making its body. It is almost completely unable to move on its own."
+15,Beedrill,Bug,Poison,"May appear in a swarm. Flies at violent speeds, all the while stabbing with the toxic stinger on its rear."
+16,Pidgey,Normal,Flying,"Does not like to fight. It hides in tall grass and so on, foraging for food such as small bugs."
+17,Pidgeotto,Normal,Flying,"The claws on its feet are well developed. It can carry prey such as an EXEGGCUTE to its nest over 60 miles away."
+18,Pidgeot,Normal,Flying,"It spreads its gorgeous wings widely to intimidate enemies. It races through the skies at Mach-2 speed."
+19,Rattata,Normal,None,"Its fangs are long and very sharp. They grow continuously, so it gnaws on hard things to whittle them down."
+20,Raticate,Normal,None,"Its rear feet have three toes each. They are webbed, enabling it to swim across rivers."
+21,Spearow,Normal,Flying,"It busily flits around here and there. Even if it is frail, it can be a tough foe that uses MIRROR MOVE."
+22,Fearow,Normal,Flying,"Its huge and magnificent wings can keep it aloft in the sky. It can remain flying a whole day without landing."
+23,Ekans,Poison,None,"A very common sight in grassland, etc. It flicks its tongue in and out to sense danger in its surroundings."
+24,Arbok,Poison,None,"The pattern on its belly appears to be a frightening face. Weak foes will flee just at the sight of the pattern."
+25,Pikachu,Electric,None,"It has small electric sacs on both its cheeks. If threatened, it looses electric charges from the sacs."
+26,Raichu,Electric,None,"Its electric charges can reach even 100,000 volts. Careless contact can cause even an Indian elephant to faint."
+27,Sandshrew,Ground,None,"It burrows and lives underground. If threatened, it curls itself up into a ball for protection."
+28,Sandslash,Ground,None,"It is adept at attacking with the spines on its back and its sharp claws while quickly scurrying about."
+29,Nidoran♀,Poison,None,"Though small, it must be treated with caution because of its powerfully toxic barbs. The female has smaller horns."
+30,Nidorina,Poison,None,"The female has a gentle temperament. It emits ultrasonic cries that have the power to befuddle foes."
+31,Nidoqueen,Poison,Ground,"The body is covered by stiff, needle-like scales. If it becomes excited, the needles bristle outwards."
+32,Nidoran♂,Poison,None,"Its large ears are flapped like wings when it is listening to distant sounds. It extends toxic barbs when angered."
+33,Nidorino,Poison,None,"It is easily angered. By swinging its well-developed horn wildly, it can even punch through diamond."
+34,Nidoking,Poison,Ground,"It is recognized by its rock-hard hide and its extended horn. Be careful with the horn as it contains venom."
+35,Clefairy,Fairy,None,"Its adorable appearance makes it popular as a pet. However, it is rare and difficult to find."
+36,Clefable,Fairy,None,"It has an acute sense of hearing. It can easily hear a pin being dropped nearly 1,100 yards away."
+37,Vulpix,Fire,None,"While young, it has six gorgeous tails. When it grows, several new tails are sprouted."
+38,Ninetales,Fire,None,"It has nine long tails and fur that gleams gold. It is said to live for 1,000 years."
+39,Jigglypuff,Normal,Fairy,"It captivates foes with its huge, round eyes, then lulls them to sleep by singing a soothing melody."
+40,Wigglytuff,Normal,Fairy,"Its fur is extremely fine, dense, and supple. The exquisitely pleasant fur conveys an image of luxury."
+41,Zubat,Poison,Flying,"It has no eyes. Instead, it relies on its ultrasonic cries for echo location to flit about in darkness."
+42,Golbat,Poison,Flying,"It clamps down on its prey with needle-sharp fangs and drains over 10 ounces of blood in one gulp."
+43,Oddish,Grass,Poison,"Its scientific name is “Oddium Wanderus.” At night, it is said to walk nearly 1,000 feet on its two roots."
+44,Gloom,Grass,Poison,"Its pistils exude an incredibly foul odor. The horrid stench can cause fainting at a distance of 1.25 miles."
+45,Vileplume,Grass,Poison,"Its petals are the largest in the world. It fiendishly scatters allergy-causing pollen from its petals."
+46,Paras,Bug,Grass,"Growing out of the bug’s back are mushrooms called tochukaso. The mushrooms grow with the bug host."
+47,Parasect,Bug,Grass,"It scatters toxic spores from the mushroom cap. In China, the spores are used as herbal medicine."
+48,Venonat,Bug,Poison,"Its eyes act as radar, enabling it to be active in darkness. The eyes can also shoot powerful beams."
+49,Venomath,Bug,Poison,"The wings are covered with dustlike scales. Every time it flaps its wings, it looses highly toxic dust."
+50,Diglet,Ground,None,"It burrows through the ground at a shallow depth. It leaves raised earth in its wake, making it easy to spot."
+51,Dugtrio,Ground,None,"In battle, it digs through the ground and strikes the unsuspecting foe from an unexpected direction."
+52,Meowth,Normal,None,"All it does is sleep during the daytime. At night, it patrols its territory with its eyes aglow."
+53,Persian,Normal,None,"Has a vicious temperament. Beware if it raises its tail straight up. It is a signal that it is about to pounce and bite."
+54,Psyduck,Water,None,"It is constantly wracked by a headache. When the headache turns intense, it begins using mysterious powers."
+55,Golduck,Water,None,"The forelegs are webbed, helping to make it an adept swimmer. It can be seen swimming elegantly in lakes, etc."
+56,Mankey,Fight,None,"Light and agile on its feet, and ferocious in temperament. When angered, it flies into an uncontrollable frenzy."
+57,Primape,Fight,None,"It is always outrageously furious. If it gives chase, it will tenaciously track the target no matter how far."
+58,Growlithe,Fire,None,"Very friendly and faithful to people. It will try to repel enemies by barking and biting."
+59,Arcanine,Fire,None,"A POKéMON that is described in Chinese legends. It is said to race at an unbelievable speed."
+60,Poliwag,Water,None,"Its slick black skin is thin and damp. A part of its internal organs can be seen through the skin as a spiral pattern."
+61,Poliwhirl,Water,None,"Its two legs are well developed. Even though it can live on the ground, it prefers living in water."
+62,Poliwrath,Water,Fight,"An adept swimmer, it knows the front crawl, butterfly, and more. It is faster than the best human swimmers."
+63,Abra,Psychic,None,"It sleeps for 18 hours a day. It uses a variety of extrasensory powers even while asleep."
+64,Kadabra,Psychic,None,"It happened one morning - a boy with extrasensory powers awoke in bed transformed into KADABRA."
+65,Alakazam,Psychic,None,"It does not like physical attacks very much. Instead, it freely uses extrasensory powers to defeat foes."
+66,Machop,Fight,None,"Its whole body is composed of muscles. Even though it’s the size of a human child, it can hurl 100 grown-ups."
+67,Machoke,Fight,None,"Its formidable body never gets tired. It helps people by doing work such as the moving of heavy goods."
+68,Machamp,Fight,None,"Its four ruggedly developed arms can launch a flurry of 1,000 punches in just two seconds."
+69,Bellsprout,Grass,Poison,"Its bud looks like a human face. Because of the bud, it is rumored to be a type of legendary mandrake plant."
+70,Weepinbell,Grass,Poison,"The leafy parts act as cutters for slashing foes. It spits a fluid that dissolves everything."
+71,VictreeBel,Grass,Poison,"Lures prey into its mouth with a honeylike aroma. The helpless prey is melted with a dissolving fluid."
+72,Tentacool,Water,Poison,"Its eyes are as transparent as crystals. From them, it shoots mysterious beams of light."
+73,Tentacruel,Water,Poison,"It has 80 tentacles that move about freely. They can sting, causing poisoning and sharp, stabbing pain."
+74,Geodude,Rock,Ground,"Its round form makes it easy to pick up. Some people have used them to hurl at each other in a snowball fight."
+75,Graveler,Rock,Ground,"Be careful while hiking on mountain trails. GRAVELER may come rolling down the path without slowing."
+76,Golem,Rock,Ground,"It is enclosed in a hard shell that is as rugged as slabs of rock. It sheds skin once a year to grow larger."
+77,Ponyta,Fire,None,"Its body is light, and its legs are incredibly powerful. It can clear Ayers Rock in one leap."
+78,Rapidash,Fire,None,"It can gallop at a top speed of 150 miles per hour. It can race as fast as a bullet train while ablaze."
+79,Slowpoke,Water,Psychic,"It is always vacantly lost in thought, but no one knows what it is thinking about. It is good at fishing with its tail."
+80,Slowbrow,Water,Psychic,"When a SLOWPOKE went hunting in the sea, its tail was bitten by a SHELLDER. That made it evolve into SLOWBRO."
+81,Magnemite,Electric,Steel,"It moves while constantly hovering. It discharges THUNDER WAVE and so on from the units at its sides."
+82,Magneton,Electric,Steel,"A linked cluster formed of several MAGNEMITE. It discharges powerful magnetic waves at high voltage."
+83,Farfetch'd,Normal,Flying,"It always walks about with a plant stalk clamped in its beak. The stalk is used for building its nest."
+84,Doduo,Normal,Flying,"A two-headed POKéMON that was discovered as a sudden mutation. It runs at a pace of over 60 miles per hour."
+85,Dodrio,Normal,Flying,"An odd species that is rarely found. The three heads respectively represent joy, sadness, and anger."
+86,Seel,Water,None,"Covered with light blue fur, its hide is thick and tough. It is active in bitter cold of minus 40 degrees Fahrenheit."
+87,Dewgong,Water,Ice,"Its body is covered with a pure white fur. The colder the weather, the more active it becomes."
+88,Grimer,Poison,None,"Sludge exposed to X rays from the moon transformed into GRIMER. It loves feeding on filthy things."
+89,Muk,Poison,None,"It is usually undetectable because it blends in with the ground. Touching it can cause terrible poisoning."
+90,Shelder,Water,None,"It is encased in a shell that is harder than diamond. Inside, however, it is surprisingly tender."
+91,Cloyster,Water,Ice,"Its shell is extremely hard. It cannot be shattered, even with a bomb. The shell opens only when it is attacking."
+92,Gastly,Ghost,Poison,"A being that exists as a thin gas. It can topple an Indian elephant by enveloping the prey in two seconds."
+93,Haunter,Ghost,Poison,"If you get the feeling of being watched in darkness when nobody is around, HAUNTER is there."
+94,Gengar,Ghost,Poison,"It is said to emerge from darkness to steal the lives of those who become lost in mountains."
+95,Onix,Rock,Ground,"It usually lives underground. It searches for food while boring its way through the ground at 50 miles per hour."
+96,Drowzee,Psychic,None,"A descendent of the legendary animal baku, which is said to eat dreams. It is skilled at hypnotism."
+97,Hypno,Psychic,None,"It carries a pendulum-like device. There once was an incident in which it took away a child it hypnotized."
+98,Krabby,Water,None,"It can be found near the sea. The large pincers grow back if they are torn out of their sockets."
+99,Kingler,Water,None,"Its large and hard pincer has 10,000-horsepower strength. However, being so big, it is unwieldy to move."
+100,Voltorb,Electric,None,"A life-form whose identity is unknown. It is said to SCREECH or suddenly SELFDESTRUCT."
+101,Electrode,Electric,None,"It explodes in response to even minor stimuli. It is feared, with the nickname of “The Bomb Ball.”"
+102,Exeggcute,Grass,Psychic,"Even though it appears to be eggs of some sort, it was discovered to be a life-form more like plant seeds."
+103,Exeggutor,Grass,Psychic,"It is called “The Walking Tropical Rainforest.” Each of the nuts has a face and a will of its own."
+104,Cubone,Ground,None,"It wears the skull of its dead mother on its head. When it becomes lonesome, it is said to cry loudly."
+105,Marowak,Ground,None,"It is small and was originally very weak. Its temperament turned ferocious when it began using bones."
+106,Hitmonlee,Fight,None,"The legs freely contract and stretch. The stretchy legs allow it to hit a distant foe with a rising kick."
+107,Hitmonchan,Fight,None,"The spirit of a pro boxer has infused this POKéMON. It throws punches that are faster than a bullet train."
+108,Lickitung,Normal,None,"Its tongue is twice the length of its body. It can be moved like an arm for grabbing food and attacking."
+109,Koffing,Poison,None,"Its thin, balloon-like body is inflated by horribly toxic gases. It reeks when it is nearby."
+110,Weezing,Poison,None,"Very rarely, a sudden mutation can result in two small KOFFING twins becoming conjoined as a WEEZING."
+111,Rhyhorn,Ground,Rock,"Strong, but not too bright, this POKéMON can shatter even a skyscraper with its charging TACKLES."
+112,Rhydon,Ground,Rock,"It begins walking on its hind legs after evolution. It can punch holes through boulders with its horn."
+113,Chansey,Normal,None,"It lays several eggs a day. The eggs are apparently rich in nutrients and extremely delicious."
+114,Tangela,Grass,None,"Blue plant vines cloak the POKéMON’s identity in a tangled mass. It entangles anything that gets close."
+115,Kangaskhan,Normal,None,"The female raises its offspring in a pouch on its belly. It is skilled at attacking using COMET PUNCH."
+116,Horsea,Water,None,"It maintains balance using its tail, which is wound up like a coil. It may spray ink from its mouth."
+117,Seadra,Water,None,"Its body bristles with sharp spikes. Carelessly trying to touch it could cause fainting from the spikes."
+118,Goldeen,Water,None,"Its dorsal and pectoral fins are strongly developed like muscles. It can swim at a speed of five knots."
+119,Seaking,Water,None,"The horn on its head is sharp like a drill. It bores a hole in a boulder to make its nest."
+120,Staryu,Water,None,"It appears in large numbers by seashores. At night, its central core flashes with a red light."
+121,Starmie,Water,Psychic,"This POKéMON has a geometric body. Because of its body, the locals suspect that it is an alien creature."
+122,Mr.Mine,Psychic,Fairy,"It is adept at conning people. It is said to be able to create walls out of thin air by miming."
+123,Scyther,Bug,Flying,"It tears and shreds prey with its wickedly sharp scythes. It very rarely spreads its wings to fly."
+124,Jynx,Ice,Psychic,"It speaks using a language that sounds human. Research is under way to determine what is being said."
+125,Electabuzz,Electric,None,"It loves to feed on strong electricity. It occasionally appears around large power plants and so on."
+126,Magmar,Fire,None,"Found near the mouth of a volcano. This fire-breather’s body temperature is nearly 2,200 degrees Fahrenheit."
+127,Pinsir,Bug,None,"Its two long pincer horns are powerful. Once they grip an enemy, they won’t release until the foe is torn."
+128,Tauros,Normal,None,"When it is about to TACKLE, it whips its body repeatedly with its three long tails."
+129,Magikarp,Water,None,"It is virtually worthless in terms of both power and speed. It is the most weak and pathetic POKéMON in the world."
+130,Gyarados,Water,Flying,"It has an extremely aggressive nature. The HYPER BEAM it shoots from its mouth totally incinerates all targets."
+131,Lapras,Water,Ice,"Its high intelligence enables it to understand human speech. It likes to ferry people on its back."
+132,Ditto,Normal,None,"It can freely recombine its own cellular structure to transform into other life-forms."
+133,Eevee,Normal,None,"An extremely rare POKéMON that may evolve in a number of different ways depending on stimuli."
+134,Vaporeon,Water,None,"Its body’s cellular structure is similar to the molecular composition of water. It can melt invisibly in water."
+135,Jolteon,Electric,None,"If it is angered or startled, the fur all over its body bristles like sharp needles that pierce foes."
+136,Flareon,Fire,None,"It has a flame bag inside its body. After inhaling deeply, it blows out flames of nearly 3,100 degrees Fahrenheit."
+137,Porygon,Normal,None,"Using the most advanced technologies, scientists finally succeeded in making the first artificial POKéMON."
+138,Omanyte,Rock,Water,"A prehistoric POKéMON that lived in the primordial sea, it swims by twisting its 10 tentacles about."
+139,Omastar,Rock,Water,"Its tentacles are highly developed as if they are hands and feet. As soon as it ensnares prey, it bites."
+140,Kabuto,Rock,Water,"This POKéMON was regenerated from the fossil of an ancient creature. It protects itself with a hard shell."
+141,Kabutops,Rock,Water,"It swims freely through water. It catches prey with its scythe-like arms and drains the victim’s fluids."
+142,Aerodactyl,Rock,Flying,"It was regenerated from a dinosaur’s genetic matter that was found in amber. It flies with high-pitched cries."
+143,Snorlax,Normal,None,"It is not satisfied unless it eats over 880 pounds of food every day. When it is done eating, it goes promptly to sleep."
+144,Articuno,Ice,Flying,"One of the legendary bird POKéMON. With its long tail trailing behind, its flying form is magnificent."
+145,Zapdos,Electric,Flying,"One of the legendary bird POKéMON. While it is flying, it makes crackling and snapping sounds."
+146,Moltres,Fire,Flying,"One of the legendary bird POKéMON. Those seeing it are overwhelmed by its orange wings that seem to be on fire."
+147,Dratini,Dragon,None,"Even the young can exceed 6.5 feet in length. It grows larger by repeatedly shedding skin."
+148,Dragonair,Dragon,None,"It is said to live in seas and lakes. Even though it has no wings, it has been seen flying occasionally."
+149,Dragonite,Dragon,Flying,"It can fly in spite of its big and bulky physique. It circles the globe in just 16 hours."
+150,Mewtwo,Psychic,None,"A POKéMON whose genetic code was repeatedly recombined for research. It turned vicious as a result."
+151,Mew,Psychic,None,"A POKéMON of South America that was thought to have been extinct. It is very intelligent and learns any move."
