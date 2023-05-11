@@ -1,12 +1,13 @@
+package parser;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.Arrays;
 import java.util.List;
 
 public class PokemonParser {
     private final List<String> lines;
 
-    PokemonParser(FileReader fileReader) {
+    public PokemonParser(FileReader fileReader) {
         this.lines = new BufferedReader(fileReader).lines().toList();
     }
 
@@ -34,7 +35,7 @@ public class PokemonParser {
             case "Rock" -> PokemonType.ROCK;
             case "Steel" -> PokemonType.STEEL;
             case "Water" -> PokemonType.WATER;
-            // case "None" -> PokemonType.NONE;
+            // case "None" -> parser.PokemonType.NONE;
             default -> PokemonType.NONE;
         };
     }
