@@ -1,18 +1,12 @@
-package parser;
+package parser.Pokemon;
 
-import java.io.BufferedReader;
+import parser.Abstract.Parser;
+
 import java.io.FileReader;
-import java.util.List;
 
-public class PokemonParser {
-    private final List<String> lines;
-
+public class PokemonParser extends Parser<Pokemon> {
     public PokemonParser(FileReader fileReader) {
-        this.lines = new BufferedReader(fileReader).lines().toList();
-    }
-
-    public List<Pokemon> parse() {
-        return lines.stream().map(this::parsePokemon).toList();
+        super(fileReader);
     }
 
     private PokemonType stringToPokemonType(String str) {
@@ -35,12 +29,13 @@ public class PokemonParser {
             case "Rock" -> PokemonType.ROCK;
             case "Steel" -> PokemonType.STEEL;
             case "Water" -> PokemonType.WATER;
-            // case "None" -> parser.PokemonType.NONE;
+            // case "None" -> parser.Pokemon.PokemonType.NONE;
             default -> PokemonType.NONE;
         };
     }
 
-    private Pokemon parsePokemon(String str) {
+    @Override
+    protected Pokemon parseSingle(String str) {
         var arr = str.split(",");
         return new Pokemon(Integer.parseInt(arr[0]), arr[1], stringToPokemonType(arr[2]), stringToPokemonType(arr[3]), str.split("\"")[1]);
     }

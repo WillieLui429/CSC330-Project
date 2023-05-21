@@ -17,27 +17,12 @@ public class SearchBar extends JPanel {
         searchField.setMaximumSize(searchSize);
         searchField.setFont(new Font("Fira Sans", Font.PLAIN, (int) ((windowHeight + windowWidth) * 0.02)));
 
-        searchSize = new Dimension(searchSize.width / 2, searchSize.height);
-        JButton changeCard = new JButton(changeCardName);
-        changeCard.setFont(new Font("Fira Sans", Font.PLAIN, (int) ((windowHeight + windowWidth) * 0.02)));
-        changeCard.setMinimumSize(searchSize);
-        changeCard.setPreferredSize(searchSize);
-        changeCard.setMaximumSize(searchSize);
-        changeCard.setFocusPainted(false);
-        changeCard.setMnemonic(KeyEvent.VK_BACK_SPACE);
-        changeCard.addActionListener(actionListener);
-        changeCard.setActionCommand("switchCard");
+        searchSize = new Dimension((int) (searchSize.width/2.5), searchSize.height);
+        var homeCard = new PokeButton("To Menu", PokeButton.CENTER, (int) ((windowHeight + windowWidth) * 0.015), searchSize, false, KeyEvent.VK_BACK_SLASH, "back", actionListener);
+        var changeCard = new PokeButton(changeCardName, PokeButton.CENTER, (int) ((windowHeight + windowWidth) * 0.015), searchSize, false, KeyEvent.VK_BACK_SPACE, "switchCard", actionListener);
+        var submitSearch = new PokeButton("Search", PokeButton.CENTER, (int) ((windowHeight + windowWidth) * 0.015), searchSize, false, KeyEvent.VK_ENTER, submitSearchCommand, actionListener);
 
-        JButton submitSearch = new JButton("Search");
-        submitSearch.setFont(new Font("Fira Sans", Font.PLAIN, (int) ((windowHeight + windowWidth) * 0.02)));
-        submitSearch.setMinimumSize(searchSize);
-        submitSearch.setPreferredSize(searchSize);
-        submitSearch.setMaximumSize(searchSize);
-        submitSearch.setFocusPainted(false);
-        submitSearch.setMnemonic(KeyEvent.VK_ENTER);
-        submitSearch.addActionListener(actionListener);
-        submitSearch.setActionCommand(submitSearchCommand);
-
+        this.add(homeCard);
         this.add(changeCard);
         this.add(searchField);
         this.add(submitSearch);

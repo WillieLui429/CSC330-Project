@@ -5,6 +5,12 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public final class Utility {
+    public static ImageIcon makeIcon(int imageWidth, int imageHeight, String imageDir) {
+        var icon = new ImageIcon(imageDir);
+        resizeIcon(icon, imageWidth, imageHeight);
+        return icon;
+    }
+
     public static void resizeIcon(ImageIcon imgIcon, int w, int h) {
         BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = resizedImg.createGraphics();

@@ -1,4 +1,4 @@
-package parser;
+package parser.Pokemon;
 
 public enum PokemonType {
     BUG,
